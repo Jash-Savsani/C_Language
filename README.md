@@ -1,2 +1,2 @@
 # C language
-Here I put basic codes, with you.
+Here I put c lauguage codes, with you.
