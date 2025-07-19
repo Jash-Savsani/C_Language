@@ -1,38 +1,23 @@
-/*Given a N x M matrix, print its element in zig-zag fashion, 
-i.e., print first row from left to right, 
-second row from right to left, third row again from left to right and so on.*/
 #include<stdio.h>
 void main()
 {
-	int i,j,r,c;
-	printf("Enter Number of Rows and Colums for 2D Array: ");
-	scanf("%d%d",&r,&c);
-	int a[r][c];
-	for(i=0;i<r;i++)
+	int i,n;
+	printf("Enter a Number of Array Elements:");
+	scanf("%d",&n);
+	int a[n];
+	for(i=0;i<n;i++)
 	{
-		for(j=0;j<c;j++)
-		{
-			printf("Enter a[%d][%d]: ",i,j);
-			scanf("%d",&a[i][j]);
-		}
+		printf("Enter a Number:");
+		scanf("%d",&a[i]);
 	}
-	printf("\n\n");
-	for(i=0;i<r;i++)
+	printf("Normal Series:");
+	for(i=0;i<n;i++)
 	{
-		if(i%2==0)//even
-		{
-			for(j=0;j<c;j++)
-			{
-				printf("a[%d][%d] is: %d\n",i,j,a[i][j]);
-			}	
-		}
-		else//odd
-		{
-			for(j=c-1;j>=0;j--)
-			{
-				printf("a[%d][%d] is: %d\n",i,j,a[i][j]);
-			}	
-		}
-		
+		printf("%d,",a[i]);
+	}
+	printf("\nReverse Series:");
+	for(i=n-1;i>=0;i--)
+	{
+		printf("%d,",a[i]);
 	}
 }
